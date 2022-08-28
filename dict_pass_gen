@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+import requests, secrets
+
+passlen = int(input("passlen: "))
+
+wordsite = "https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt"
+response = requests.get(wordsite)
+wordlist = response.content.splitlines()
+
+password = []
+
+for i in range(passlen):
+    password.append(secrets.choice(wordlist).decode("utf-8").split()[1])
+
+print("Your password is:\n"+" ".join(password))
