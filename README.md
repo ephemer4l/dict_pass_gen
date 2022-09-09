@@ -8,7 +8,7 @@ See the table on this Wikipedia [page](https://en.wikipedia.org/wiki/Password_st
 
 ```bash
 $ git clone https://github.com/ephemer4l/phrasegen.git
-$ cp phrasegen ~/.local/bin/
+$ cd phrasegen && cp phrasegen ~/.local/bin/
 $ chmod ~/.local/bin/phrasegen
 $ phrasegen
 passlen: 7
